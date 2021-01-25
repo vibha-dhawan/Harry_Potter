@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html>
+<title>Harry Potter Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+#ab
+{
+  box-shadow: 0 0 0 2px black,0 0 0 7px brown,0 0 0 11px black;
+  height: 10%;
+  width: 10%;
+  margin-left: 30px;
+  margin-top: 20px;
+  animation-name: example;
+  animation-duration: 4s;
+}
+@keyframes example {
+  from {border-radius: 5px;
+    box-shadow: 0 0 0 2px black,0 0 0 7px brown,0 0 0 11px black;
+  height: 10%;
+  width: 20%;}
+  to {border-radius: 10px;
+    box-shadow: 0 0 0 2px black,0 0 0 7px teal,0 0 0 11px black;
+  height: 15%;
+  width: 25%;}
+</style>
+<body>
+
+<center><img src="hp.png"></center>
+<!-- Navbar -->
+<div>
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+<a href="home.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">HOME</a>
+    <a href="books.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BOOKS</a>
+    <a href="quiz.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">QUIZ</a>
+    <a href="aboutus.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT US</a>
+<a href="signup.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SIGN UP</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="http://harrypotter.wikia.com/wiki/Main_Page" class="w3-bar-item w3-button">Wikia</a>
+        <a href="https://en.wikipedia.org/wiki/Harry_Potter" class="w3-bar-item w3-button">Wikipedia</a>
+        <a href="https://www.pottermore.com/" class="w3-bar-item w3-button">Pottermore</a>
+      </div>
+    </div>
+   
+  </div>
+</div>
+<div align="center">
+<img src="vp.jpg"  id="ab" ><br><br><div>
+<p1  id="z" style="height: 10%; background-color: yellow;">VIBHA DHAWAN</p1><br>
+<p2 style="height: 10%;">
+Roll Number:1810991273</p2><br>
+<p3  style="height: 10%; background-color: yellow;">PRERNA SETIA</p3><br>
+<p4 style="height: 10%;">
+Roll Number:1810991247</p4><br>
+
+
+</div></div>
+
+ 
+      
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+ 
+  <p class="w3-medium">Designed by <b>VIBHA DHAWAN && PRERNA SETIA</b></p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

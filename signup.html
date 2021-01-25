@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		var cold=0;
+		function pk()
+		{
+
+			var e=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+			var k=document.getElementById("bo").value;
+			//document.write(k);
+			if (e.test(k) == false) 
+            {
+                alert('Invalid Email Address');
+            }
+            else
+            {
+            	cold=1;
+            }
+            var op=document.getElementById("vi").value;
+             if (op.match(/[a-z]/g) && op.match( /[A-Z]/g) && op.match( /[0-9]/g) && op.match( /[^a-zA-Z\d]/g) && op.length >= 8) 
+             {
+             	cold=1;
+             }
+             else
+             {
+             	alert('Password should contain uppercase,lowercase letters,special characters and digits');
+             }
+             if(cold==1)
+             {
+             	 alert('DONE!!!!');
+             }
+		}
+		function au()
+		{
+			var k=document.getElementById("x").value;
+		var l=k.length;
+if(l==0)
+		{
+			document.getElementById("ak").innerHTML="EMPTY";
+document.getElementById("ak").style.color="red";
+		}
+		else
+		{
+
+		var o=document.getElementById("ak").innerHTML="DONE";	
+		document.getElementById("ak").style.color="green";
+		}
+		}
+		function augg()
+		{
+			var k=document.getElementById("vi").value;
+		var l=k.length;
+if(l==0)
+		{
+			document.getElementById("c").innerHTML="EMPTY";
+document.getElementById("c").style.color="red";
+		}
+		else
+		{
+
+		var o=document.getElementById("c").innerHTML="DONE";	
+		document.getElementById("c").style.color="green";
+		}
+		}
+		function auggg()
+	{
+		var k=document.getElementById("prerna").value;
+		var l=k.length;
+		var i,z;
+		if(l==0)
+		{
+			document.getElementById("d").innerHTML="EMPTY";
+			document.getElementById("d").style.color="red";
+		}
+		else if(l!=0)
+		{
+			var r=document.getElementById("vi").value;
+		var u=r.length;
+		for(i=0;i<u||i<l;i++)
+		{
+				if(r[i]==k[i])
+				{
+					z=1;
+				}
+				else
+				{
+					z=0;
+					break;
+				}
+			}
+			if(z==1)
+			{
+				document.getElementById("d").innerHTML="DONE";
+				document.getElementById("d").style.color="green";
+			}
+			else if(z==0)
+			{
+				document.getElementById("d").innerHTML="DOESNOT MATCH";
+				document.getElementById("d").style.color="red";
+			}
+		}
+		
+		}
+	</script>
+	<style>
+	.p{
+	background-color:blue;
+	width: 100%;
+}
+.p4
+{
+	width: 25%;
+	background-color: white;
+	margin: 100px;
+	margin-left: 400px;
+	height: 400px;
+}
+.p6
+{
+	padding: 20px;
+}
+#hy
+{
+	animation-name: example;
+  animation-duration: 4s;
+}
+@keyframes example {
+  from {background-image:url('prerna.jpg') ;}
+  to {background-image:url('vinha.jpg') ;}
+  @keyframes example {
+  from {background-image:url('vinha.jpg') ;}
+  to {background-image:url('prerna.jpg') ;}
+}
+</style>
+</head>
+<body style="background-image: url('prerna.jpg');background-repeat: no-repeat;background-size: 100%" id="hy">
+	<form class="p4" align="center" style="margin-left: 500px;background-color: black;">
+		<table align="center" class="p6" cellspacing="10" cellpadding="2" style="height: 200px;">
+			<tr><td>
+				<input type="text" placeholder="name"onkeyup="au()" id="x"></td><td id="ak"></td>
+			</tr>
+			<tr><td>
+				<input type="email" placeholder="email address"onkeyup="aug()" id="bo"></td><td id="b"></td>>
+			</tr>
+			<tr><td>
+			<input type="password" placeholder="password"onkeyup="augg()" id="vi"></td><td id="c"></td>>
+			</tr>
+			<tr><td>
+			<input type="password" placeholder="confirm password"onkeyup="auggg()" id="prerna"></td><td id="d"></td>
+			</tr>
+			<tr><td>
+			<input type="number" placeholder="phone number"onkeyup="augggg()"></td><td id="e"></td>
+			</tr>
+			<tr><td>
+			<input type="submit" value="CREATE" class="p" onclick="pk()"></td>
+			</tr>
+			<tr><td>
+			<input type="text" placeholder="username"></td>
+			</tr>
+			<tr><td>
+			<input type="password" placeholder="password"></td>
+			</tr>
+			<tr><td>
+			<input type="submit" value="LOGIN" class="p" onclick="pk()"></td>
+		</table>
+	</form>
+</body>
+</html>
